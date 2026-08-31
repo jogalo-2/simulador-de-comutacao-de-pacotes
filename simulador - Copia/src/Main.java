@@ -4,7 +4,8 @@ public class Main{
         Usuario u2 = new Usuario("keven");
         Usuario u3 = new Usuario("Nalanda");
 
-        Simulador simulador = new Simulador();
+        // A fila suporta dois pacotes. O terceiro sera perdido por congestionamento.
+        Simulador simulador = new Simulador(2);
         Pacote p1 = u1.criarPacote(1,u2,"Salve Keven");
         Pacote p2 = u2.criarPacote(2,u3,"Alou Nalanda");
         Pacote p3 = u3.criarPacote(3,u1,"atrasamos o trabalho");
